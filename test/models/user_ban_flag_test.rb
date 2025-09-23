@@ -1,4 +1,4 @@
-require 'test_helper'
+require "test_helper"
 
 class UserBanFlagTest < ActiveSupport::TestCase
   test "should read and write ban flag" do
