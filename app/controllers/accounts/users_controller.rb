@@ -23,7 +23,7 @@ class Accounts::UsersController < ApplicationController
     def role_params
       {
         role: params.require(:user)[:role].presence_in(%w[ member administrator ]) || "member",
-        ban: params.require(:user)[:ban] == "1"
+        banned: params.require(:user)[:banned] == "1"
       }
     end
 end
