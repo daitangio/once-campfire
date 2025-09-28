@@ -59,3 +59,13 @@ so that people who forget their password know who to contact for help.
 Campfire is single-tenant: any rooms designated "public" will be accessible by
 all users in the system. To support entirely distinct groups of customers, you
 would deploy multiple instances of the application.
+
+# System requirements 
+Campfire is packed as a Docker container image, but all you need to know is how to connect to your server and run a single command which we’ll give you. It runs on your own hardware, in the cloud (AWS, etc.), or a host like DigitalOcean.
+
+| Concurrent Users | RAM  | CPU   |
+| :--------------- | :--- | :---- |
+| 250              | 2GB  | 1CPU  |
+| 1000             | 8GB  | 4CPU  |
+| 5000             | 32GB | 16CPU |
+| 10000            | 64GB | 32CPU |
