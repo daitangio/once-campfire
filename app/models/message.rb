@@ -13,6 +13,9 @@ class Message < ApplicationRecord
 
   scope :ordered, -> { order(:created_at) }
   scope :with_creator, -> { preload(creator: :avatar_attachment) }
+
+  # Ensure rich text body stored inside action_text_rich_texts
+  # using action_text extension
   scope :with_attachment_details, -> {
     with_rich_text_body_and_embeds
     with_attached_attachment
