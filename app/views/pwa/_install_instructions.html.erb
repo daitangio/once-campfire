@@ -2,46 +2,55 @@
   <details class="notifications-help pwa__instructions hide-in-pwa" data-controller="pwa-install" data-pwa-install-prompting-class="pwa--can-install" data-notifications-target="details">
     <summary class="btn">
       <%= image_tag "external/install.svg", aria: { hidden: "true" }, size: 20 %>
-      <strong>Install Campfire as a web app.</strong>
+      <strong><%= t(".summary") %></strong>
       <%= image_tag "disclosure.svg", aria: { hidden: "true" }, size: 10, class: "disclosure" %>
     </summary>
 
     <% case
       when platform.edge? %>
+        <% install_icon = image_tag("install-edge.svg", alt: "", size: 16) %>
         <ol>
-          <li>Click <em><%= image_tag "install-edge.svg", alt: "the app available - install Campfire chat button", size: 16 %></em>in the address bar.</li>
-          <li>Click <em>Install</em>.</li>
+          <% t(".edge.steps", install_icon: install_icon).each do |step| %>
+            <li><%= step.html_safe %></li>
+          <% end %>
         </ol>
       <% when platform.chrome? && platform.android? %>
+        <% menu_icon = image_tag("menu-dots-vertical.svg", alt: "", size: 16) %>
         <ol>
-          <li>Tap the <em><%= image_tag "menu-dots-vertical.svg", alt: "More options", size: 16 %></em> menu button.</li>
-          <li>Tap <em>Install app</em> in the menu.</li>
+          <% t(".chrome_android.steps", menu_icon: menu_icon).each do |step| %>
+            <li><%= step.html_safe %></li>
+          <% end %>
         </ol>
       <% when platform.firefox? && platform.android? %>
+        <% menu_icon = image_tag("menu-dots-vertical.svg", alt: "", size: 16) %>
         <ol>
-          <li>Tap the <em><%= image_tag "menu-dots-vertical.svg", alt: "More options", size: 16 %></em> menu button.</li>
-          <li>Tap <em>Install</em> in the menu.</li>
+          <% t(".firefox_android.steps", menu_icon: menu_icon).each do |step| %>
+            <li><%= step.html_safe %></li>
+          <% end %>
         </ol>
       <% when platform.safari? && platform.desktop? %>
         <ol>
-          <li>Click <em>File</em> in the top left.</li>
-          <li>Click <em>Add to Dock…</em>.</li>
+          <% t(".safari_desktop.steps").each do |step| %>
+            <li><%= step.html_safe %></li>
+          <% end %>
         </ol>
       <% when (platform.safari? || platform.chrome?) && platform.ios? %>
-        <p>To receive push notifications in <%= platform.browser.capitalize %> for <%= platform.operating_system %>, you must install Campfire as a web app.</p>
+        <% share_icon = image_tag("external/share.svg", alt: "", size: 20) %>
+        <p><%= t(".ios.notice", browser: platform.browser.capitalize, os: platform.operating_system) %></p>
         <ol>
-          <li>Tap <em><%= image_tag "external/share.svg", alt: "the share button", size: 20 %></em></li>
-          <li>Tap <em>Add to Home Screen</em>.</li>
+          <% t(".ios.steps", share_icon: share_icon).each do |step| %>
+            <li><%= step.html_safe %></li>
+          <% end %>
         </ol>
       <% else %>
-        <p>Some platforms require you to install Campfire as a web app to receive push notifications.</p>
+        <p><%= t(".fallback") %></p>
     <% end %>
 
     <div class="margin-block-start txt-align-center pwa__installer">
       <hr class="separator margin-block">
       <button class="btn btn--reversed center" data-action="pwa-install#promptInstall">
         <%= image_tag "external/install.svg", aria: { hidden: "true" } %>
-        Install now
+        <%= t(".install_button") %>
       </button>
     </div>
   </details>

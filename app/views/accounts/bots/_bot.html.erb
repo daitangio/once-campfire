@@ -10,7 +10,7 @@
 
     <%= link_to edit_account_bot_path(bot), class: "btn flex-item-justify-end", style: "view-transition-name: chat-bot-#{ bot.id }" do %>
       <%= image_tag "pencil.svg", aria: { hidden: "true" }, size: 20 %>
-      <span class="for-screen-reader">Edit <%= bot.name %></span>
+      <span class="for-screen-reader"><%= t(".edit_reader", name: bot.name) %></span>
     <% end %>
   </div>
 
@@ -25,13 +25,13 @@
         <%= image_tag "messages-outlined.svg", aria: { hidden: "true" }, size: 24, class: "colorize--black" %>
 
         <div class="flex-item-grow">
-          <input type="text" class="input full-width fill-white" value="<%= curl_text_line %>" aria-label="curl command for posting messages" readonly>
+          <input type="text" class="input full-width fill-white" value="<%= curl_text_line %>" aria-label="<%= t(".message_command_label") %>" readonly>
         </div>
 
         <div class="txt-small">
           <%= button_to_copy_to_clipboard(curl_text_line) do %>
             <%= image_tag "copy-paste.svg", aria: { hidden: "true" }, size: 20 %>
-            <span class="for-screen-reader">Copy message command</span>
+            <span class="for-screen-reader"><%= t(".copy_message_reader") %></span>
           <% end %>
         </div>
       </div>
@@ -41,13 +41,13 @@
         <%= image_tag "attachment.svg", aria: { hidden: "true" }, size: 24, class: "colorize--black" %>
 
         <div class="flex-item-grow">
-          <input type="text" class="input full-width fill-white" value="<%= curl_upload_line %>" aria-label="curl command for posting attachments" readonly>
+          <input type="text" class="input full-width fill-white" value="<%= curl_upload_line %>" aria-label="<%= t(".attachment_command_label") %>" readonly>
         </div>
 
         <div class="txt-small">
           <%= button_to_copy_to_clipboard(curl_upload_line) do %>
             <%= image_tag "copy-paste.svg", aria: { hidden: "true" }, size: 20 %>
-            <span class="for-screen-reader">Copy attachment command</span>
+            <span class="for-screen-reader"><%= t(".copy_attachment_reader") %></span>
           <% end %>
         </div>
       </div>

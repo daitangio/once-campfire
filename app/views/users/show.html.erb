@@ -9,7 +9,7 @@
     <% if Current.user == @user %>
       <%= link_to user_profile_path, class: "btn" do %>
         <%= image_tag "pencil.svg", aria: { hidden: "true" } %>
-        <span class="for-screen-reader">Edit my profile</span>
+        <span class="for-screen-reader"><%= t(".edit_reader") %></span>
       <% end %>
     <% end %>
   </div>
@@ -18,15 +18,15 @@
 <section class="panel txt-align-center">
   <div class="flex flex-column gap">
     <div class="avatar txt-xx-large center" style="background: white">
-      <%= image_tag fresh_user_avatar_path(@user), alt: "Profile avatar", class: "avatar" %>
+      <%= image_tag fresh_user_avatar_path(@user), alt: t(".avatar_alt"), class: "avatar" %>
     </div>
 
     <% if @user.bot? %>
-      <div class="pad-double--inline push--inline push--block-start">
-        <% if @user.active? %>
+        <div class="pad-double--inline push--inline push--block-start">
+          <% if @user.active? %>
           <%= button_to_direct_room_with @user%>
         <% else %>
-          <div><%= @user.name %> is no longer on this account</div>
+          <div><%= t(".inactive_message", name: @user.name) %></div>
         <% end %>
       </div>
     <% else %>
@@ -41,7 +41,7 @@
 
         <div class="pad-inline-double margin-inline margin-block-start">
           <%= button_to rooms_directs_path(user_ids: [ @user.id ]), class: "btn btn--reversed full-width txt-large" do %>
-            <%= image_tag "messages.svg", aria: { hidden: "true", label: "Ping #{@user.name}" } %>
+            <%= image_tag "messages.svg", aria: { hidden: "true", label: t(".ping_label", name: @user.name) } %>
           <% end %>
         </div>
 
@@ -53,7 +53,7 @@
       <% else %>
         <div>
           <h1 class="txt-x-large margin-none"><%= @user.name %></h1>
-          <div><%= @user.name %> is no longer on this account</div>
+          <div><%= t(".inactive_message", name: @user.name) %></div>
         </div>
       <% end %>
     <% end %>

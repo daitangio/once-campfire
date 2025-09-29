@@ -1,13 +1,13 @@
-<% @page_title = platform.apple_messages? ? "Campfire" : "Unsupported browser" %>
+<% @page_title = platform.apple_messages? ? "Campfire" : t(".page_title") %>
 
 <div class="panel center">
   <header>
     <h1 class="txt-x-large txt-tight-lines txt-align-center margin-none-block-start margin-block-end">
-      Upgrade to a supported web browser
+      <%= t(".heading") %>
     </h1>
     <div class="flex align-start gap">
       <%= translation_button(:incompatible_browser_messsage) %>
-      <p class="margin-none-block-start">Campfire requires a modern web browser. Please use one of the browsers listed below and make sure auto-updates are enabled.</p>
+      <p class="margin-none-block-start"><%= t(".description") %></p>
     </div>
   </header>
 

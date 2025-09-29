@@ -8,8 +8,8 @@
             <%= translation_button(:invite_message) %>
           </div>
           <p>
-            <strong>Welcome to Campfire</strong><br>
-            To invite people to chat, share the join link below.
+            <strong><%= t(".welcome_title") %></strong><br>
+            <%= t(".welcome_body") %>
           </p>
         </div>
         <%= render "accounts/invite" %>

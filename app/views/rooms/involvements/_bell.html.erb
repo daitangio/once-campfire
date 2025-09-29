@@ -6,7 +6,7 @@
       <button class="btn" data-action="click->notifications#attemptToSubscribe" data-notifications-target="bell">
         <%= image_tag "notification-bell-loading.svg", size: 20, aria: { hidden: "true" } %>
         <%= image_tag "notification-bell-alert.svg", size: 20, aria: { hidden: "true" }, hidden: true %>
-        <span class="for-screen-reader">Notification settings for this <%= room.direct? ? "Ping" : "room" %></span>
+        <span class="for-screen-reader"><%= room.direct? ? t(".settings_reader_direct") : t(".settings_reader_room") %></span>
       </button>
     <% end %>
 
@@ -14,11 +14,11 @@
       <div class="flex flex-column txt-align-center">
         <span class="btn btn--faux center txt-x-large">
           <%= image_tag "notification-bell-alert.svg", size: 48, aria: { hidden: "true" } %>
-          <span class="for-screen-reader">Notifications alert</span>
+          <span class="for-screen-reader"><%= t(".alert_reader") %></span>
         </span>
 
         <section>
-          <h1 class="txt-large margin-none">Notifications aren’t allowed</h1>
+          <h1 class="txt-large margin-none"><%= t(".blocked_heading") %></h1>
           <div class="txt-align-start margin-block-start">
             <%= render partial: "pwa/browser_settings" %>
             <%= render partial: "pwa/system_settings" %>
@@ -28,7 +28,7 @@
 
         <form method="dialog" class="flex align-center gap center">
           <button class="btn dialog__close" autofocus="true">
-            <span class="for-screen-reader">Close</span>
+            <span class="for-screen-reader"><%= t(".close_reader") %></span>
             <%= image_tag "remove.svg", size: 20, aria: { hidden: "true" } %>
           </button>
         </form>
