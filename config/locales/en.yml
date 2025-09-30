@@ -75,7 +75,6 @@ en:
       upload_logo_reader: "Upload logo"
     help_contact:
       email_title: "Email %{name}"
-      version_info: "Campfire™ version %{version}"
     invite:
       copy_reader: "Copy join link"
       invite_label: "Share to invite more people"

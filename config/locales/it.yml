@@ -1,0 +1,416 @@
+it:
+  accounts:
+    bots:
+      bot:
+        attachment_command_label: "comando curl per inviare allegati"
+        copy_attachment_reader: "Copia comando allegato"
+        copy_message_reader: "Copia comando messaggio"
+        edit_reader: "Modifica %{name}"
+        message_command_label: "comando curl per inviare messaggi"
+      edit:
+        delete_confirm: "Sei sicuro di voler rimuovere definitivamente questo bot dall'account? Questa azione non può essere annullata."
+        delete_label: "Elimina questo chat bot"
+        page_title: "Modifica bot"
+        regenerate_confirm: "Sei sicuro di voler cambiare la chiave del bot? Tutti gli usi di questo bot dovranno essere aggiornati."
+        regenerate_label: "Genera una nuova chiave"
+      form:
+        avatar_alt: "Avatar bot"
+        name_placeholder: "Dai un nome al bot"
+        setup_reader: "Configurazione chat bot"
+        upload_avatar_reader: "Carica avatar del bot"
+        webhook_placeholder: "URL webhook"
+      index:
+        add_label: "Aggiungi un chat bot"
+        description: "Con i chat bot, altri siti e servizi possono pubblicare aggiornamenti direttamente su Campfire."
+        heading: "Chat bot"
+        page_title: "Chat bot"
+      new:
+        page_title: "Nuovo chat bot"
+    custom_styles:
+      edit:
+        heading: "CSS personalizzato"
+        instructions: "Aggiungi stili CSS personalizzati."
+        page_title: "Stili personalizzati"
+        placeholder: "Aggiungi stili CSS…"
+        save_reader: "Salva modifiche"
+        warning: "Usa cautela: potresti rompere qualcosa."
+    edit:
+      bots_reader: "Configura chat bot"
+      delete_logo_reader: "Elimina logo"
+      name_placeholder: "Nomina questo account"
+      page_title: "Impostazioni account"
+      save_changes_reader: "Salva modifiche"
+      styles_reader: "Stili personalizzati"
+      upload_logo_reader: "Carica logo"
+    help_contact:
+      email_title: "Email a %{name}"
+    invite:
+      copy_reader: "Copia link di adesione"
+      invite_label: "Condividi per invitare altre persone"
+      qr_reader: "Mostra codice QR del link di adesione"
+      regenerate_reader: "Rigenera link di adesione"
+      share_body: "Apri questo link per unirti a me su Campfire e iniziare a chattare."
+      share_reader: "Condividi link di adesione"
+      share_title: "Link per unirsi a Campfire"
+    users:
+      user:
+        administrator: "Amministratore"
+        delete_confirm: "Sei sicuro di voler rimuovere definitivamente questa persona dall'account? Questa azione non può essere annullata."
+        delete_reader: "Elimina %{name}"
+        member: "Membro"
+        role_reader: "Ruolo: %{role}"
+        settings_reader: "Le mie impostazioni"
+  first_runs:
+    show:
+      add_avatar_alt: "Aggiungi il tuo avatar"
+      add_avatar_reader: "Aggiungi il tuo avatar"
+      avatar_reader: "Avatar"
+      email_placeholder: "Indirizzo email"
+      name_placeholder: "Nome"
+      page_title: "Configura Campfire"
+      password_placeholder: "Password"
+      submit_reader: "Salva"
+  layouts:
+    application:
+      logo_alt: "Logo Campfire"
+      logo_label: "Once software dalla home page di 37signals"
+      skip_link: "Vai al contenuto principale"
+    lightbox:
+      close_reader: "Chiudi visualizzatore immagini"
+      dialog_label: "Visualizzatore immagini (Premi esc per chiudere)"
+      download_reader: "Scarica file"
+      share_reader: "Condividi file"
+  messages:
+    actions:
+      copy_label: "Copia link"
+      copy_title: "Copia link"
+      download_label: "Scarica"
+      download_title: "Scarica"
+      edit_label: "Modifica"
+      edit_title: "Modifica"
+      new_boost_reader: "Nuovo boost"
+      options_reader: "Opzioni messaggio"
+      reply_label: "Rispondi"
+      reply_title: "Rispondi"
+      share_label: "Condividi"
+      share_title: "Condividi"
+    boosts:
+      boost:
+        avatar_label: "%{user} ha potenziato %{boost}"
+        delete_hint: "Premi invio per eliminare questo boost"
+        delete_reader: "Elimina questo boost"
+      boosts:
+        add_reader: "Aggiungi un boost"
+      new:
+        add_label: "Aggiungi un boost"
+        cancel_reader: "Annulla"
+        submit_reader: "Invia"
+    edit:
+      close_link: "Chiudi editor e annulla le modifiche"
+      close_reader: "Chiudi editor e annulla le modifiche"
+      delete_confirm: "Sei sicuro di voler eliminare questo messaggio?"
+      delete_reader: "Elimina messaggio"
+      edit_label: "Modifica messaggio"
+      save_reader: "Salva modifiche"
+    room_not_found:
+      deleted: "Questa stanza è stata eliminata."
+    template:
+      options_reader: "Opzioni messaggio"
+    unrenderable:
+      failure: "Impossibile caricare il contenuto del messaggio"
+  pwa:
+    browser_settings:
+      summary: "Controlla le impostazioni di %{browser}"
+      firefox_android:
+        steps:
+          - "Tocca il pulsante <em>%{lock_icon}</em> Visualizza informazioni sul sito nella barra degli indirizzi."
+          - "Tocca <em>Notifiche</em> per passare a <em>Consentite</em>."
+      edge_desktop:
+        site_heading: "Attiva le notifiche per questo sito."
+        site_steps:
+          - "Fai clic su <em>%{lock_icon}</em> a sinistra della barra degli indirizzi."
+          - "In <em>Autorizzazioni per questo sito &gt; Notifiche</em>, scegli <em>Consenti</em>."
+        browser_heading: "Attiva le notifiche per %{browser}."
+        browser_steps_windows:
+          - "Fai clic su <em>Start</em>, poi su <em>Impostazioni</em>."
+          - "Vai a <em>Sistema &gt; Notifiche</em>."
+          - "Fai clic su <em>%{switch_icon}</em> su <em>ON</em> per %{browser}."
+        browser_steps_macos:
+          - "Fai clic su <em aria-label=\"the Apple menu\"></em> in alto a sinistra."
+          - "Fai clic su <em>Impostazioni di Sistema…</em>."
+          - "Fai clic su <em>Notifiche</em>."
+          - "Fai clic su <em>%{browser}</em>."
+          - "Fai clic su <em>%{switch_icon}</em> per <em>Consentire le notifiche</em>."
+      firefox_desktop:
+        site_heading: "Attiva le notifiche per questo sito."
+        site_steps:
+          - "Fai clic su <em>%{browser}</em> in alto a sinistra."
+          - "Fai clic su <em>Impostazioni…</em>."
+          - "Fai clic su <em>Privacy e sicurezza</em> nella barra laterale."
+          - "Scorri fino a <em>Autorizzazioni</em>."
+          - "Fai clic su <em>Impostazioni</em> accanto a <em>Notifiche</em>."
+          - "Seleziona <em>Consenti</em> accanto a <em>%{url}</em>."
+        browser_heading: "Attiva le notifiche per %{browser}."
+        browser_steps_windows:
+          - "Fai clic su <em>Start</em>, poi su <em>Impostazioni</em>."
+          - "Vai a <em>Sistema &gt; Notifiche</em>."
+          - "Fai clic su <em>%{switch_icon}</em> su <em>ON</em> per %{browser}."
+        browser_steps_macos:
+          - "Fai clic su <em aria-label=\"the Apple menu\"></em> in alto a sinistra."
+          - "Fai clic su <em>Impostazioni di Sistema…</em>."
+          - "Fai clic su <em>Notifiche</em>."
+          - "Fai clic su <em>%{browser}</em>."
+          - "Fai clic su <em>%{switch_icon}</em> per <em>Consentire le notifiche</em>."
+      chrome_desktop:
+        site_heading: "Attiva le notifiche per questo sito."
+        site_steps:
+          - "Fai clic sull'icona <em>%{sliders_icon}</em> nella barra degli indirizzi."
+          - "Fai clic su <em>Impostazioni sito</em>."
+          - "Assicurati che le notifiche siano <em>Consentite</em>."
+        browser_heading: "Attiva le notifiche per %{browser}."
+        browser_steps_windows:
+          - "Fai clic su <em>Start</em>, poi su <em>Impostazioni</em>."
+          - "Vai a <em>Sistema &gt; Notifiche</em>."
+          - "Fai clic su <em>%{switch_icon}</em> su <em>ON</em> per %{browser}."
+        browser_steps_macos:
+          - "Fai clic su <em aria-label=\"the Apple menu\"></em> in alto a sinistra."
+          - "Fai clic su <em>Impostazioni di Sistema…</em>."
+          - "Fai clic su <em>Notifiche</em>."
+          - "Fai clic su <em>%{browser}</em>."
+          - "Fai clic su <em>%{switch_icon}</em> per <em>Consentire le notifiche</em>."
+      chrome_android:
+        steps:
+          - "Tocca il pulsante di menu <em>%{menu_icon}</em>."
+          - "Tocca <em>Impostazioni</em>."
+          - "Tocca <em>Notifiche</em>."
+          - "Tocca <em>%{switch_icon}</em> per <em>Consentire le notifiche di %{browser}</em>."
+          - "Tocca <em>%{switch_icon}</em> accanto a <em>App web</em>."
+          - "Tocca <em>%{bell_icon}</em> e seleziona <em>Consenti</em>."
+      safari_desktop:
+        steps:
+          - "Fai clic su <em>%{browser}</em> in alto a sinistra."
+          - "Fai clic su <em>Impostazioni…</em>."
+          - "Fai clic sulla scheda <em>Siti web</em>."
+          - "Fai clic su <em>Notifiche</em> nella barra laterale."
+          - "Fai clic su <em>%{url}</em> nell'elenco."
+          - "Seleziona <em>Consenti</em>."
+      fallback: "Assicurati che le notifiche siano abilitate per <em>%{url}</em> nelle impostazioni di %{browser}."
+    install_instructions:
+      summary: "Installa Campfire come web app."
+      edge:
+        steps:
+          - "Fai clic su <em>%{install_icon}</em> nella barra degli indirizzi."
+          - "Fai clic su <em>Installa</em>."
+      chrome_android:
+        steps:
+          - "Tocca il pulsante di menu <em>%{menu_icon}</em>."
+          - "Tocca <em>Installa app</em> nel menu."
+      firefox_android:
+        steps:
+          - "Tocca il pulsante di menu <em>%{menu_icon}</em>."
+          - "Tocca <em>Installa</em> nel menu."
+      safari_desktop:
+        steps:
+          - "Fai clic su <em>File</em> in alto a sinistra."
+          - "Fai clic su <em>Aggiungi al Dock…</em>."
+      ios:
+        notice: "Per ricevere notifiche push in %{browser} su %{os}, devi installare Campfire come web app."
+        steps:
+          - "Tocca <em>%{share_icon}</em>."
+          - "Tocca <em>Aggiungi alla schermata Home</em>."
+      fallback: "Alcune piattaforme richiedono l'installazione di Campfire come web app per ricevere notifiche push."
+      install_button: "Installa ora"
+    system_settings:
+      summary: "Controlla le impostazioni di %{os}"
+      firefox_android:
+        steps:
+          - "Tocca il pulsante di menu <em>%{menu_icon}</em>."
+          - "Tocca <em>Impostazioni</em>."
+          - "Tocca <em>Notifiche</em>."
+          - "Tocca <em>%{switch_icon}</em> per <em>Consentire le notifiche di %{browser}</em>."
+      edge_desktop:
+        steps:
+          - "Fai clic su <em>Start</em>, poi su <em>Impostazioni</em>."
+          - "Vai a <em>Sistema &gt; Notifiche</em>."
+          - "Fai clic su <em>%{switch_icon}</em> su <em>ON</em> per Campfire."
+      desktop_browser:
+        windows_steps:
+          - "Fai clic su <em>Start</em>, poi su <em>Impostazioni</em>."
+          - "Vai a <em>Sistema &gt; Notifiche</em>."
+          - "Fai clic su <em>%{switch_icon}</em> su <em>ON</em> per Campfire."
+        macos_steps:
+          - "Fai clic su <em aria-label=\"the Apple menu\"></em> in alto a sinistra."
+          - "Fai clic su <em>Impostazioni di Sistema…</em>."
+          - "Fai clic su <em>Notifiche</em>."
+          - "Fai clic su <em>Campfire</em>."
+          - "Fai clic su <em>%{switch_icon}</em> per <em>Consentire le notifiche</em>."
+      safari_desktop:
+        steps:
+          - "Fai clic su <em aria-label=\"the Apple menu\"></em> in alto a sinistra."
+          - "Fai clic su <em>Impostazioni di Sistema…</em>."
+          - "Fai clic su <em>Notifiche</em>."
+          - "Fai clic su <em>Campfire</em>."
+          - "Fai clic su <em>%{switch_icon}</em> per <em>Consentire le notifiche</em>."
+      ios:
+        steps:
+          - "Apri l'app <em>%{gear_icon}</em> Impostazioni."
+          - "Scorri e tocca <em>Campfire</em>."
+          - "Tocca <em>Notifiche</em>."
+          - "Tocca <em>%{switch_icon}</em> per <em>Consentire le notifiche</em>."
+      chrome_android:
+        steps:
+          - "Apri l'app <em>%{gear_icon}</em> Impostazioni."
+          - "Tocca <em>Notifiche</em>."
+          - "Tocca <em>Notifiche app</em>."
+          - "Scorri fino a <em>Campfire</em>."
+          - "Tocca <em>%{switch_icon}</em> per <em>Consentire le notifiche</em>."
+      fallback: "Assicurati che le notifiche siano consentite per %{browser} nelle impostazioni di sistema."
+    manifest:
+      default_name: "Campfire"
+      description: "Un'app di chat dei creatori di Basecamp e HEY."
+      categories:
+        - "social"
+        - "business"
+        - "productivity"
+      shortcuts:
+        new_room:
+          name: "Nuova chat room"
+          description: "Apri Campfire e avvia una nuova chat room"
+        profile:
+          name: "Il mio profilo"
+          description: "Apri Campfire e visualizza il tuo profilo"
+      screenshots:
+        chat: "Campfire è un sistema di chat di gruppo installabile e auto-ospitato."
+        sidebar: "Invita facilmente le persone. Crea stanze. @menzioni, DM e supporto mobile."
+        dark: "Supporto completo per la modalità scura, personalizzabile per il tuo brand."
+  rooms:
+    closeds:
+      form:
+        all_access_reader: "Concedi a tutti l'accesso a questa stanza"
+        everyone_label: "Tutti"
+        everyone_reader: "Tutti"
+      user:
+        access_reader: "Concedi a %{name} l'accesso a questa stanza"
+    directs:
+      edit:
+        delete_confirm: "Sei sicuro di voler eliminare questo ping e tutti i messaggi al suo interno? Questa azione non può essere annullata."
+        delete_label: "Elimina Ping"
+        delete_text: "Ping"
+        page_title: "Modifica impostazioni per %{name}"
+      new:
+        cancel_reader: "Annulla modifiche"
+        hint: "Digita i nomi per pingare qualcuno…"
+        start_reader: "Avvia Ping"
+    involvements:
+      bell:
+        alert_reader: "Avviso notifiche"
+        blocked_heading: "Le notifiche non sono consentite"
+        close_reader: "Chiudi"
+        settings_reader_direct: "Impostazioni notifiche per questo Ping"
+        settings_reader_room: "Impostazioni notifiche per questa stanza"
+    layouts:
+      edit:
+        page_title: "Modifica impostazioni per %{name}"
+      form:
+        name_placeholder: "Nomina la stanza"
+        name_reader: "Nomina questa stanza"
+      new:
+        page_title: "Nuova chat room"
+    opens:
+      form:
+        everyone_label: "Tutti"
+        everyone_reader: "Tutti"
+        limited_access_reader: "Concedi l'accesso solo ad alcuni in questa stanza"
+    show:
+      composer:
+        attach_reader: "Allega un file"
+        message_label: "Scrivi un messaggio"
+        rich_text_reader: "Testo formattato"
+        search_reader: "Cerca"
+        send_reader: "Invia messaggio"
+      invitation:
+        welcome_body: "Per invitare persone a chattare, condividi il link di adesione qui sotto."
+        welcome_title: "Benvenuto in Campfire"
+      nav:
+        ping_with_reader: "Ping con"
+        settings_reader_direct: "Impostazioni per questo Ping"
+        settings_reader_room: "Impostazioni per questa stanza"
+  searches:
+    index:
+      clear_confirm: "Sei sicuro di voler cancellare le ricerche recenti?"
+      clear_reader: "Cancella ricerche recenti"
+      exit_reader: "Esci dalla ricerca"
+      field_label: "ricerca"
+      page_title: "Cerca"
+      reset_reader: "Pulisci campo di ricerca"
+      submit_reader: "Cerca"
+  sessions:
+    incompatible_browser:
+      description: "Campfire richiede un browser moderno. Usa uno dei browser indicati di seguito e assicurati che gli aggiornamenti automatici siano attivati."
+      heading: "Aggiorna a un browser supportato"
+      page_title: "Browser non supportato"
+    new:
+      email_placeholder: "Inserisci il tuo indirizzo email"
+      page_title: "Accedi"
+      password_placeholder: "Inserisci la tua password"
+      submit_reader: "Vai"
+  users:
+    autocompletables:
+      template:
+        remove_reader: "Rimuovi"
+    new:
+      avatar_reader: "Avatar"
+      email_placeholder: "Indirizzo email"
+      login_reader: "Accedi"
+      name_placeholder: "Nome"
+      page_title: "Registrati"
+      password_placeholder: "Password"
+      submit_reader: "Salva"
+      upload_avatar_reader: "Carica avatar"
+    profiles:
+      show:
+        avatar_reader: "Avatar"
+        bio_placeholder: "Qualche parola su di te…"
+        delete_avatar_reader: "Elimina avatar"
+        dev_mode_link: "Modalità sviluppatore notifiche push"
+        email_placeholder: "Inserisci il tuo indirizzo email"
+        logout_reader: "Esci"
+        name_placeholder: "Inserisci il tuo nome"
+        password_placeholder: "Cambia password"
+        upload_avatar_reader: "Carica avatar"
+      transfer:
+        copy_reader: "Copia link di accesso automatico"
+        qr_reader: "Mostra codice QR di accesso automatico"
+        self_label: "Usa questo link per accedere automaticamente da un altro dispositivo"
+        share_body: "Questo è il tuo URL di accesso privato, NON CONDIVIDERLO. Usalo per accedere da un altro dispositivo o se rimani bloccato fuori."
+        share_label: "Condividi per farli rientrare nel loro account"
+        share_reader: "Condividi link di accesso automatico"
+        share_title: "Il tuo link di accesso"
+    push_subscriptions:
+      index:
+        heading: "Sottoscrizioni alle notifiche push"
+        page_title: "Sottoscrizioni notifiche push"
+      push_subscription:
+        delete_reader: "Elimina sottoscrizione"
+        test_reader: "Invia notifica di prova"
+    show:
+      avatar_alt: "Avatar profilo"
+      edit_reader: "Modifica il mio profilo"
+      inactive_message: "%{name} non fa più parte di questo account"
+      ping_label: "Ping %{name}"
+    sidebars:
+      rooms:
+        direct:
+          ping_reader: "Ping con"
+        direct_placeholder:
+          start_reader: "Avvia un ping con"
+      show:
+        account_reader: "Impostazioni account"
+        menu_reader: "Apri menu"
+        new_reader: "Nuovo"
+        new_room_label: "Nuova chat room"
+        ping_label: "Ping"
+        profile_reader: "Le mie impostazioni"
+  welcome:
+    show:
+      page_title: "Nessuna stanza ancora"
