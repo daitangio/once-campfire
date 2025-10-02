@@ -6,8 +6,7 @@ class ApplicationController < ActionController::Base
 
   private
     def forbid_banned_user
-      return unless Current.user&.banned?
-      return if banned_user_allowed_action?
+      return unless Current.user&.banned? and not banned_user_allowed_action?
 
       # GG: flash seems is unable to be shown, so we do not put it
       # flash.now[:alert] = "Your account has been banned."
