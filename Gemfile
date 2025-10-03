@@ -49,6 +49,10 @@ group :development, :test do
   gem "rubocop-rails-omakase", require: false
   gem "faker", require: false
   gem "brakeman", require: false
+  # GG VSCode extension
+  # gem "solargraph"
+  # For suport scripts 
+  gem "whois-parser"
 end
 
 group :test do

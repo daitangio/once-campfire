@@ -1,0 +1,45 @@
+#!/usr/bin/env ruby
+# Small script to check a bunch of domains
+require File.expand_path("../../config/environment", File.dirname(__FILE__))
+require "whois-parser"
+
+domains = [
+
+"zarcos.org",
+"zaxxon5.org",
+"zacosme.org",
+"chattly.com",
+"msgloop.com",
+"talkish.com",
+"txtnest.com",
+"blabify.com",
+"pingify.com",
+"chazone.com",
+"txtbuzz.com",
+"msgtide.com",
+"chatilo.com",
+"chatilo.org",
+"chatone.org"
+]
+# Refer to https://github.com/weppos/whois
+whois = Whois::Client.new(:timeout => 10)
+domains.each do |domain|
+  begin
+    begin
+      record = whois.lookup(domain)    
+      parser=record.parser
+      if !parser.registered?
+        # puts "#{domain} is available for purchase."
+      else
+        # puts "#{domain} is already registered. #{parser.technical_contacts.first}"
+      end      
+    rescue Exception => e 
+      # puts "** Error #{e.class}"
+      puts "#{domain} is not registered at all"
+    end
+    # puts "#{parser}"
+
+  rescue => e
+    puts "Error checking #{domain}: #{e.message}"
+  end
+end
