@@ -1,0 +1,25 @@
+#!/usr/bin/env ruby
+# Small stupid script taken from https://sive.rs/com
+# to scan domains 
+require "optparse"
+require 'sqlite3'
+
+def parse_options!
+  options = {}
+  options[:basepath]="/Volumes/ExtremeSSD/tmp/"
+
+  return options
+end
+
+options = parse_options!
+
+# Step3 scan if word is not here
+db = SQLite3::Database.new( options[:basepath]+'/domains.db')
+query = db.prepare('select domain from domains where domain = ?')
+File.readlines('/usr/share/dict/words').each do |word|  
+  # To be adjusted
+  if word.length <=10
+    rows = query.execute(word.downcase.strip)
+    puts word unless rows.next
+  end
+end

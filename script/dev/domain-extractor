@@ -3,10 +3,10 @@
 # to extract domain names
 #require File.expand_path("../../config/environment", File.dirname(__FILE__))
 require "optparse"
-require 'sqlite3'
 
 def parse_options!
   options = {}
+  options[:basepath]="/Volumes/ExtremeSSD/tmp/"
 
   parser = OptionParser.new do |opts|
     opts.banner = "Usage: domain-extractor [options]"
@@ -29,12 +29,12 @@ end
 
 options = parse_options!
 puts "#{options[:domain]} ---Domain to search for"
-filename=options[:domain]+".txt"
+filename=options[:basepath]+"/"+options[:domain]+".txt"
 idx_search="."+options[:domain]
 
 domain = ''
 File.open(filename, 'r') do |infile|
-  File.open('domains.txt', 'w') do |outfile|
+  File.open(options[:basepath]+'/domains.txt', 'w') do |outfile|
     while line = infile.gets
       temp = line[0...(line.index(idx_search))]
       next if temp == domain
@@ -45,10 +45,10 @@ File.open(filename, 'r') do |infile|
 end
 
 # Step2 Crete database
-# # Step3 scan
-# db = SQLite3::Database.new('domains.db')
-# query = db.prepare('select domain from domains where domain = ?')
-# File.readlines('/usr/share/dict/words').each do |word|
-#   rows = query.execute(word.downcase.strip)
-#   puts word unless rows.next
-# end
+# $ sqlite3 domains.db 
+# sqlite> create table domains(domain text);
+# sqlite> .import "domains.txt" domains
+# sqlite> create index dd on domains(domain);
+
+
+
