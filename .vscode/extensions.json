@@ -1,6 +1,5 @@
 {
     "recommendations": [
-        "shopify.ruby-lsp",
         "castwide.solargraph"
     ]
 }
