@@ -1,0 +1,54 @@
+#!/usr/bin/env ruby
+# Small stupid script taken from https://sive.rs/com
+# to extract domain names
+#require File.expand_path("../../config/environment", File.dirname(__FILE__))
+require "optparse"
+require 'sqlite3'
+
+def parse_options!
+  options = {}
+
+  parser = OptionParser.new do |opts|
+    opts.banner = "Usage: domain-extractor [options]"
+
+    opts.on "--domain DOMAIN", String, "Domian like com or org" do |d|
+      options[:domain] = d
+    end
+  end.tap(&:parse!)
+
+ 
+
+  if options[:domain] == nil 
+    puts "Domain required"
+    warn(parser.help)
+    exit(1)
+  else
+    options
+  end
+end  
+
+options = parse_options!
+puts "#{options[:domain]} ---Domain to search for"
+filename=options[:domain]+".txt"
+idx_search="."+options[:domain]
+
+domain = ''
+File.open(filename, 'r') do |infile|
+  File.open('domains.txt', 'w') do |outfile|
+    while line = infile.gets
+      temp = line[0...(line.index(idx_search))]
+      next if temp == domain
+      domain = temp
+      outfile.puts domain
+    end
+  end
+end
+
+# Step2 Crete database
+# # Step3 scan
+# db = SQLite3::Database.new('domains.db')
+# query = db.prepare('select domain from domains where domain = ?')
+# File.readlines('/usr/share/dict/words').each do |word|
+#   rows = query.execute(word.downcase.strip)
+#   puts word unless rows.next
+# end
